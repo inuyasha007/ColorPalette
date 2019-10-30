@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import PaletteList from "./PaletteList";
+import SingleColorPalette from "./SingleColorPalette";
 import Palette from "./Palette";
 import seedColors from "./seedColors";
 import { generatePalette } from "./colorHelpers";
@@ -28,6 +29,17 @@ function App() {
         render={routeProps => (
           <Palette
             palette={generatePalette(findPalette(routeProps.match.params.id))}
+          />
+        )}
+      />
+      <Route
+        path="/palette/:paletteId/:colorId"
+        render={routeProps => (
+          <SingleColorPalette
+            colorId={routeProps.match.params.colorId}
+            palette={generatePalette(
+              findPalette(routeProps.match.params.paletteId)
+            )}
           />
         )}
       />
