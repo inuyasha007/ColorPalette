@@ -1,4 +1,4 @@
-.ColorBox {
+/* .ColorBox {
   width: 20%;
   height: 25%;
   margin: 0 auto;
@@ -6,9 +6,19 @@
   position: relative;
   cursor: pointer;
   margin-bottom: -3.5px;
+} */
+
+.ColorBox.go-back {
+  background-color: black;
+  color: white;
 }
 
-.copy-button {
+/* .SingleColorPalette .ColorBox {
+  height: 50%;
+} */
+
+.copy-button,
+.back-button {
   width: 100px;
   height: 30px;
   position: absolute;
@@ -25,13 +35,17 @@
   color: white;
   text-transform: uppercase;
   border: none;
+  text-decoration: none;
+}
+
+/* .copy-button {
   opacity: 0;
 }
 
 .ColorBox:hover .copy-button {
   opacity: 1;
   transition: 0.5s;
-}
+} */
 
 .box-content {
   position: absolute;
@@ -45,7 +59,14 @@
   font-size: 12px;
 }
 
-.see-more {
+/* .light-text {
+  color: white;
+}
+
+.dark-text {
+  color: rgba(0, 0, 0, 0.5);
+} */
+/* .see-more {
   background: rgba(255, 255, 255, 0.3);
   position: absolute;
   border: none;
@@ -57,9 +78,9 @@
   text-align: center;
   text-transform: uppercase;
   line-height: 30px;
-}
+} */
 
-.copy-overlay {
+/* .copy-overlay {
   opacity: 0;
   z-index: 0;
   width: 100%;
@@ -73,7 +94,7 @@
   transform: scale(50);
   z-index: 10;
   position: absolute;
-}
+} */
 
 .copy-message {
   position: fixed;
@@ -91,13 +112,13 @@
   color: white;
 }
 
-.copy-message.show {
+/* .copy-message.show {
   opacity: 1;
   transform: scale(1);
   z-index: 25;
   transition: all 0.4s ease-in-out;
   transition-delay: 0.3s;
-}
+} */
 
 .copy-message h1 {
   font-weight: 400;
