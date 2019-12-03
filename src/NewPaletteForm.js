@@ -13,8 +13,6 @@ import { arrayMove } from "react-sortable-hoc";
 import ColorPickerForm from "./ColorPickerForm";
 import styles from "./styles/NewPaletteFormStyles";
 
-
-
 class NewPaletteForm extends Component {
   static defaultProps = {
     maxColors: 20
@@ -152,6 +150,7 @@ class NewPaletteForm extends Component {
             removeColor={this.removeColor}
             axis="xy"
             onSortEnd={this.onSortEnd}
+            distance={20}
           />
         </main>
       </div>
